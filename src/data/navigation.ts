@@ -4,7 +4,7 @@ export const navItems = [
   { label: "AI & Decision Intelligence", href: "/#ai-intelligence" },
   { label: "Industries", href: "/#industries" },
   { label: "Technology", href: "/#technology" },
-  { label: "Insights", href: "/#insights" },
+  { label: "Insights", href: "/insights" },
   { label: "Enterprise Conversations", href: "/enterprise-conversations-planiq" },
   { label: "About", href: "/#about" },
   { label: "Contact", href: "/#contact" },

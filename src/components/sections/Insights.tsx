@@ -22,7 +22,7 @@ export function Insights() {
             className="mb-0"
           />
           <Link
-            href="#"
+            href="/insights"
             className="inline-flex shrink-0 items-center gap-2 text-sm font-semibold text-electric hover:underline"
           >
             View all insights
