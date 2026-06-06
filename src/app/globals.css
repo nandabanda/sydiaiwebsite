@@ -11,6 +11,9 @@
   --electric-muted: #e8f1ff;
   --border: #d9dde4;
   --border-subtle: #e8eaef;
+  --gold: #b8941f;
+  --gold-light: #d4af37;
+  --gold-muted: #f5f0e3;
 }
 
 @theme inline {
@@ -24,6 +27,9 @@
   --color-electric-muted: var(--electric-muted);
   --color-border: var(--border);
   --color-border-subtle: var(--border-subtle);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-muted: var(--gold-muted);
   --font-sans: var(--font-inter);
   --font-display: var(--font-sora);
 }

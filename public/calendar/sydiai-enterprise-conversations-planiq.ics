@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SYDIAI//Enterprise Conversations//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:planiq-webinar-20260715@sydiai.com
+DTSTAMP:20260527T000000Z
+DTSTART:20260715T103000Z
+DTEND:20260715T111500Z
+SUMMARY:SYDIAI Enterprise Conversations: Planning in the Age of AI
+DESCRIPTION:The New Playbook for LRP\, ABP\, AOP & Rolling Forecasts\n\nJoin a live industry expert conversation on how AI is reshaping enterprise planning.\n\nSpeaker: Nanda Kishore Banda\, CEO — Business Unit\, SYDIAI\n\nRegister: https://www.sydiai.com/enterprise-conversations-planiq
+LOCATION:Online
+STATUS:CONFIRMED
+ORGANIZER;CN=SYDIAI:mailto:engage@sydiai.com
+END:VEVENT
+END:VCALENDAR

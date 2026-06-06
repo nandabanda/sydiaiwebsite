@@ -1,0 +1,12 @@
+export { SydiaiLogo } from "./SydiaiLogo";
+export { WebinarHeader } from "./WebinarHeader";
+export { WebinarFooter } from "./WebinarFooter";
+export { WebinarHero } from "./WebinarHero";
+export { Countdown } from "./Countdown";
+export { EventCard } from "./EventCard";
+export { WhyAttend } from "./WhyAttend";
+export { DiscussionTopics } from "./DiscussionTopics";
+export { FeaturedPlatform } from "./FeaturedPlatform";
+export { SpeakerSection } from "./SpeakerSection";
+export { RegistrationForm } from "./RegistrationForm";
+export { FinalCTA } from "./FinalCTA";

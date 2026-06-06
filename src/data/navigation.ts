@@ -5,6 +5,7 @@ export const navItems = [
   { label: "Industries", href: "/#industries" },
   { label: "Technology", href: "/#technology" },
   { label: "Insights", href: "/#insights" },
+  { label: "Enterprise Conversations", href: "/enterprise-conversations-planiq" },
   { label: "About", href: "/#about" },
   { label: "Contact", href: "/#contact" },
 ] as const;
