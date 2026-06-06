@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ArticleTemplate } from "@/components/insights/ArticleTemplate";
 import { EditionNavigation } from "@/components/insights/EditionNavigation";
-import { NewsletterSignupForm } from "@/components/NewsletterSignupForm";
+import { EditionNewsletterCTA } from "@/components/newsletter/EditionNewsletterCTA";
 import { newsletterCopy } from "@/data/newsletter";
 import {
   demandIntelligenceEditions,
@@ -60,13 +60,9 @@ export default async function DemandEditionPage({ params }: PageProps) {
       readTime={edition.readTime}
       sections={edition.sections}
       signupBlock={
-        <NewsletterSignupForm
-          title={newsletterCopy.edition.title}
-          description={newsletterCopy.edition.description}
-          buttonLabel={newsletterCopy.demandBrief.buttonLabel}
+        <EditionNewsletterCTA
           defaultPreferences={newsletterCopy.demandBrief.defaultPreferences}
           sourcePage={`/insights/demand-intelligence-brief/${edition.slug}`}
-          compact
         />
       }
       footer={

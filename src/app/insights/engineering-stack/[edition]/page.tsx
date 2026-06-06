@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ArticleTemplate } from "@/components/insights/ArticleTemplate";
 import { EditionNavigation } from "@/components/insights/EditionNavigation";
-import { NewsletterSignupForm } from "@/components/NewsletterSignupForm";
+import { EditionNewsletterCTA } from "@/components/newsletter/EditionNewsletterCTA";
 import { newsletterCopy } from "@/data/newsletter";
 import {
   engineeringStackEditions,
@@ -58,13 +58,9 @@ export default async function EngineeringEditionPage({ params }: PageProps) {
       readTime={edition.readTime}
       sections={edition.sections}
       signupBlock={
-        <NewsletterSignupForm
-          title={newsletterCopy.edition.title}
-          description={newsletterCopy.edition.description}
-          buttonLabel={newsletterCopy.engineeringStack.buttonLabel}
+        <EditionNewsletterCTA
           defaultPreferences={newsletterCopy.engineeringStack.defaultPreferences}
           sourcePage={`/insights/engineering-stack/${edition.slug}`}
-          compact
         />
       }
       footer={

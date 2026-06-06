@@ -5,9 +5,10 @@ import { EditorialSection } from "@/components/insights/EditorialSection";
 import { PublicationCard } from "@/components/insights/PublicationCard";
 import { ArticleCard } from "@/components/insights/ArticleCard";
 import { FrameworkCard } from "@/components/insights/FrameworkCard";
-import { NewsletterSignupSection } from "@/components/insights/NewsletterSignupSection";
 import { Container } from "@/components/ui/Container";
-import { NewsletterSignupForm } from "@/components/NewsletterSignupForm";
+import { InsightsHeroSubscribe } from "@/components/newsletter/InsightsHeroSubscribe";
+import { NewsletterCTA } from "@/components/newsletter/NewsletterCTA";
+import { ResearchCircleSection } from "@/components/newsletter/ResearchCircleSection";
 import { insightsHub, INSIGHTS_PUBLISHER } from "@/data/insights/hub";
 import { newsletterCopy } from "@/data/newsletter";
 import {
@@ -40,17 +41,7 @@ export default function InsightsHubPage() {
         ctas={insightsHub.ctas.map((c) => ({ ...c }))}
       />
 
-      <section className="border-b border-border-subtle bg-ivory pb-10 lg:pb-12">
-        <Container>
-          <div className="mx-auto max-w-3xl">
-            <NewsletterSignupForm
-              {...newsletterCopy.hub}
-              sourcePage="/insights"
-              compact
-            />
-          </div>
-        </Container>
-      </section>
+      <InsightsHeroSubscribe />
 
       <section className="border-b border-border-subtle py-10 lg:py-12">
         <Container>
@@ -92,14 +83,13 @@ export default function InsightsHubPage() {
             />
           ))}
         </div>
+        <div className="mt-8">
+          <NewsletterCTA
+            {...newsletterCopy.demandBrief}
+            sourcePage="/insights#demand-intelligence-brief"
+          />
+        </div>
       </EditorialSection>
-
-      <NewsletterSignupSection
-        {...newsletterCopy.demandBrief}
-        sourcePage="/insights#demand-intelligence-brief"
-        compact
-        className="border-b border-border-subtle bg-ivory-muted/20"
-      />
 
       <EditorialSection
         id="engineering-stack"
@@ -125,14 +115,13 @@ export default function InsightsHubPage() {
             />
           ))}
         </div>
+        <div className="mt-8">
+          <NewsletterCTA
+            {...newsletterCopy.engineeringStack}
+            sourcePage="/insights#engineering-stack"
+          />
+        </div>
       </EditorialSection>
-
-      <NewsletterSignupSection
-        {...newsletterCopy.engineeringStack}
-        sourcePage="/insights#engineering-stack"
-        compact
-        className="border-b border-border-subtle"
-      />
 
       <EditorialSection
         id="applied-intelligence"
@@ -185,6 +174,8 @@ export default function InsightsHubPage() {
           </Link>
         </Container>
       </section>
+
+      <ResearchCircleSection sourcePage="/insights" />
     </>
   );
 }

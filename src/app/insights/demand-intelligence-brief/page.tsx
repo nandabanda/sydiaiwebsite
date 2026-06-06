@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { InsightHero } from "@/components/insights/InsightHero";
 import { PublicationCard } from "@/components/insights/PublicationCard";
 import { CategoryChips } from "@/components/insights/CategoryChips";
-import { NewsletterSignupSection } from "@/components/insights/NewsletterSignupSection";
 import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/insights/Breadcrumbs";
-import { newsletterCopy } from "@/data/newsletter";
+import { ListingSubscribeBar } from "@/components/newsletter/ListingSubscribeBar";
+import { ResearchCircleSection } from "@/components/newsletter/ResearchCircleSection";
 import {
   demandIntelligenceBriefMeta,
   demandIntelligenceEditions,
@@ -31,6 +31,7 @@ export default function DemandIntelligenceBriefPage() {
             ]}
             className="mb-4"
           />
+          <ListingSubscribeBar variant="demand" />
         </Container>
       </div>
 
@@ -40,13 +41,6 @@ export default function DemandIntelligenceBriefPage() {
         body={`${demandIntelligenceBriefMeta.subtitle} ${demandIntelligenceBriefMeta.description}`}
         meta={`${demandIntelligenceBriefMeta.publisher} · ${demandIntelligenceBriefMeta.cadence}`}
         compact
-      />
-
-      <NewsletterSignupSection
-        {...newsletterCopy.demandBrief}
-        sourcePage="/insights/demand-intelligence-brief"
-        compact
-        className="border-b border-border-subtle bg-ivory-muted/20 py-8"
       />
 
       <section className="pb-8 lg:pb-10">
@@ -70,11 +64,9 @@ export default function DemandIntelligenceBriefPage() {
         </Container>
       </section>
 
-      <NewsletterSignupSection
-        {...newsletterCopy.demandBrief}
+      <ResearchCircleSection
         sourcePage="/insights/demand-intelligence-brief"
-        compact
-        className="border-t border-border-subtle pb-14"
+        showTiles={false}
       />
     </>
   );

@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { InsightHero } from "@/components/insights/InsightHero";
 import { PublicationCard } from "@/components/insights/PublicationCard";
 import { CategoryChips } from "@/components/insights/CategoryChips";
-import { NewsletterSignupSection } from "@/components/insights/NewsletterSignupSection";
 import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/insights/Breadcrumbs";
-import { newsletterCopy } from "@/data/newsletter";
+import { ListingSubscribeBar } from "@/components/newsletter/ListingSubscribeBar";
+import { ResearchCircleSection } from "@/components/newsletter/ResearchCircleSection";
 import {
   engineeringStackMeta,
   engineeringStackEditions,
@@ -31,6 +31,7 @@ export default function EngineeringStackPage() {
             ]}
             className="mb-4"
           />
+          <ListingSubscribeBar variant="engineering" />
         </Container>
       </div>
 
@@ -40,13 +41,6 @@ export default function EngineeringStackPage() {
         body={`${engineeringStackMeta.subtitle} ${engineeringStackMeta.description}`}
         meta={`${engineeringStackMeta.publisher} · ${engineeringStackMeta.cadence}`}
         compact
-      />
-
-      <NewsletterSignupSection
-        {...newsletterCopy.engineeringStack}
-        sourcePage="/insights/engineering-stack"
-        compact
-        className="border-b border-border-subtle bg-ivory-muted/20 py-8"
       />
 
       <section className="pb-8 lg:pb-10">
@@ -67,11 +61,9 @@ export default function EngineeringStackPage() {
         </Container>
       </section>
 
-      <NewsletterSignupSection
-        {...newsletterCopy.engineeringStack}
+      <ResearchCircleSection
         sourcePage="/insights/engineering-stack"
-        compact
-        className="border-t border-border-subtle pb-14"
+        showTiles={false}
       />
     </>
   );
