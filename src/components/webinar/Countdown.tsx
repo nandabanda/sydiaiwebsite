@@ -27,18 +27,13 @@ function pad(n: number): string {
   return String(n).padStart(2, "0");
 }
 
-type CountdownUnitProps = {
-  value: number;
-  label: string;
-};
-
-function CountdownUnit({ value, label }: CountdownUnitProps) {
+function Unit({ value, label }: { value: number; label: string }) {
   return (
-    <div className="flex flex-col items-center">
-      <span className="font-display text-3xl font-bold tabular-nums text-navy sm:text-4xl lg:text-5xl">
+    <div className="text-center">
+      <span className="font-display text-lg font-bold tabular-nums text-navy sm:text-xl">
         {pad(value)}
       </span>
-      <span className="mt-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-navy-subtle">
+      <span className="mt-0.5 block text-[9px] font-semibold uppercase tracking-wider text-navy-subtle">
         {label}
       </span>
     </div>
@@ -46,10 +41,7 @@ function CountdownUnit({ value, label }: CountdownUnitProps) {
 }
 
 export function Countdown() {
-  const target = useMemo(
-    () => new Date(webinarEvent.startUtc),
-    []
-  );
+  const target = useMemo(() => new Date(webinarEvent.startUtc), []);
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(() =>
     calculateTimeLeft(target)
   );
@@ -62,18 +54,18 @@ export function Countdown() {
   }, [target]);
 
   return (
-    <div className="rounded-sm border border-border-subtle bg-white p-6 sm:p-8">
-      <p className="mb-5 text-center text-[11px] font-bold uppercase tracking-[0.22em] text-gold">
-        Conversation Starts In
+    <div className="rounded-sm border border-border-subtle bg-white px-4 py-3">
+      <p className="mb-2.5 text-center text-[9px] font-bold uppercase tracking-[0.18em] text-gold">
+        Starts In
       </p>
-      <div className="flex items-center justify-center gap-3 sm:gap-6">
-        <CountdownUnit value={timeLeft.days} label="Days" />
-        <span className="pb-5 text-2xl font-light text-border">/</span>
-        <CountdownUnit value={timeLeft.hours} label="Hours" />
-        <span className="pb-5 text-2xl font-light text-border">/</span>
-        <CountdownUnit value={timeLeft.minutes} label="Minutes" />
-        <span className="pb-5 text-2xl font-light text-border">/</span>
-        <CountdownUnit value={timeLeft.seconds} label="Seconds" />
+      <div className="flex items-center justify-center gap-2 sm:gap-3">
+        <Unit value={timeLeft.days} label="Days" />
+        <span className="pb-3 text-sm text-border">:</span>
+        <Unit value={timeLeft.hours} label="Hrs" />
+        <span className="pb-3 text-sm text-border">:</span>
+        <Unit value={timeLeft.minutes} label="Min" />
+        <span className="pb-3 text-sm text-border">:</span>
+        <Unit value={timeLeft.seconds} label="Sec" />
       </div>
     </div>
   );

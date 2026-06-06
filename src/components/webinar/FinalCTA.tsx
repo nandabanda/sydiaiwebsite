@@ -1,36 +1,31 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 
 export function FinalCTA() {
   return (
-    <section className="border-t border-border-subtle bg-navy py-20 lg:py-24">
+    <section className="bg-navy py-10 lg:py-12">
       <Container>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mx-auto max-w-3xl text-center"
-        >
-          <h2 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-[2.75rem] lg:leading-tight">
-            Don&apos;t Plan for the Last Decade.{" "}
-            <span className="text-gold-light">Plan for What&apos;s Next.</span>
-          </h2>
-          <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/65">
-            Join SYDIAI and a community of planning leaders rebuilding the
-            playbook for an AI-first enterprise.
-          </p>
+        <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
+          <div>
+            <h2 className="font-display text-xl font-bold tracking-tight text-white sm:text-2xl">
+              Don&apos;t plan for the last decade.{" "}
+              <span className="text-gold-light">Plan for what&apos;s next.</span>
+            </h2>
+            <p className="mt-1.5 max-w-lg text-sm text-white/60">
+              Join SYDIAI and executive leaders rebuilding the AI-first playbook.
+            </p>
+          </div>
           <Link
             href="#register"
-            className="mt-8 inline-flex items-center gap-2 rounded-sm bg-electric px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-electric/25 transition-all hover:bg-electric-hover"
+            className="inline-flex shrink-0 items-center gap-1.5 rounded-sm bg-electric px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-electric-hover"
           >
             Register Now
-            <ArrowRight className="h-4 w-4" />
+            <ArrowRight className="h-3.5 w-3.5" />
           </Link>
-        </motion.div>
+        </div>
       </Container>
     </section>
   );

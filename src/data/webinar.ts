@@ -15,18 +15,18 @@ export const webinarEvent = {
   subtitle: "The New Playbook for LRP, ABP, AOP & Rolling Forecasts",
   series: "SYDIAI Enterprise Conversations",
   description:
-    "Join a live industry expert conversation on how AI is reshaping enterprise planning — and how leading organizations are aligning strategy, finance, commercial, supply chain and operations in an uncertain world.",
+    "A live executive session on AI-native LRP, ABP, AOP and rolling forecasts — aligning strategy, finance, commercial, supply chain and operations under uncertainty.",
   date: "July 15, 2026",
   dateShort: "Wed, July 15, 2026",
   time: "4:00 PM IST · 5:30 AM CDT",
-  duration: "45 Minutes",
-  location: "Online — Link sent on registration",
+  duration: "45 min",
+  location: "Online — link on registration",
   seatsReserved: 89,
   seatsTotal: 100,
   speaker: {
     name: "Nanda Kishore Banda",
     title: "CEO — Business Unit, SYDIAI",
-    bio: "25+ years of experience across strategy, commercial excellence, planning, supply chain and enterprise transformation. Nanda has led large-scale planning and decision-orchestration programs across global enterprises, and brings a practical, outcome-focused lens to the conversation on AI in planning.",
+    bio: "25+ years across strategy, commercial excellence, supply chain and enterprise transformation. Led large-scale decision-orchestration programs globally — practical, outcome-first perspective on AI in the executive cycle.",
   },
   /** July 15, 2026 · 4:00 PM IST (UTC+5:30) */
   startUtc: "2026-07-15T10:30:00.000Z",
@@ -36,72 +36,60 @@ export const webinarEvent = {
 export const whyAttendCards = [
   {
     title: "Long Range Planning",
-    description:
-      "Rethink LRP with AI-driven scenarios and strategic foresight.",
+    description: "AI-driven scenarios. Strategic foresight at scale.",
   },
   {
     title: "Annual Business Planning",
-    description:
-      "Modernize ABP with continuous, data-grounded decisions.",
+    description: "Continuous, data-grounded ABP — not static decks.",
   },
   {
     title: "Annual Operating Planning",
-    description:
-      "Connect AOP to demand, supply and finance in real time.",
+    description: "AOP linked to demand, supply and finance in real time.",
   },
   {
     title: "Rolling Forecasts",
-    description:
-      "Move from periodic forecasts to always-on, signal-driven plans.",
+    description: "Always-on, signal-driven forecasts — not quarterly cycles.",
   },
   {
     title: "Scenario Planning",
-    description:
-      "Stress-test the business with AI-powered what-if analysis.",
+    description: "AI what-if analysis. Stress-test before you commit.",
   },
   {
     title: "Decision Intelligence",
-    description:
-      "Turn plans into orchestrated, accountable decisions.",
+    description: "Orchestrated, accountable decisions — not slideware.",
   },
 ] as const;
 
 export const discussionTopics = [
   {
     number: "01",
-    title: "Why Traditional Planning Is No Longer Enough",
-    description:
-      "The signals, speed and complexity that broke the old planning model.",
+    title: "Why the Old Model Broke",
+    description: "Signals, speed and complexity outpaced static cycles.",
   },
   {
     number: "02",
     title: "Reimagining Long Range Planning",
-    description:
-      "From static 3–5 year decks to living, AI-augmented strategic plans.",
+    description: "Living, AI-augmented strategic plans — not 3–5 year decks.",
   },
   {
     number: "03",
     title: "Modernizing Annual Business Planning",
-    description:
-      "Connect targets, capacity, demand and finance into one orchestrated plan.",
+    description: "Targets, capacity, demand and finance — one orchestrated view.",
   },
   {
     number: "04",
     title: "AI-Powered Scenario Planning",
-    description:
-      "Generate, evaluate and act on hundreds of scenarios in minutes, not weeks.",
+    description: "Hundreds of scenarios in minutes. Act with conviction.",
   },
   {
     number: "05",
     title: "The Future of Rolling Forecasts",
-    description:
-      "Continuous, signal-driven forecasts that update as the business changes.",
+    description: "Continuous forecasts that move with the business.",
   },
   {
     number: "06",
-    title: "Planning as a Competitive Advantage",
-    description:
-      "How leaders are turning planning maturity into a measurable edge.",
+    title: "Competitive Advantage",
+    description: "How maturity in the executive cycle becomes measurable edge.",
   },
 ] as const;
 
@@ -115,9 +103,9 @@ export const planIQFeatures = [
 ] as const;
 
 export const trustStrip = [
-  "100% Free to attend",
-  "Recording shared with registrants",
-  "Built for planning, finance & supply chain leaders",
+  "Free to attend",
+  "Recording for registrants",
+  "For CFO, COO & supply chain leaders",
 ] as const;
 
 export const footerQuickLinks = [

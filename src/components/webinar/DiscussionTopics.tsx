@@ -6,47 +6,42 @@ import { Container } from "@/components/ui/Container";
 
 export function DiscussionTopics() {
   return (
-    <section id="agenda" className="py-20 lg:py-28">
+    <section id="agenda" className="border-t border-border-subtle py-12 lg:py-14">
       <Container>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-2xl"
-        >
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-electric">
-            Agenda
+        <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-electric">
+              Agenda
+            </p>
+            <h2 className="mt-1 font-display text-2xl font-bold tracking-tight text-navy sm:text-3xl">
+              What We&apos;ll Explore
+            </h2>
+          </div>
+          <p className="max-w-xs text-sm text-navy-subtle sm:text-right">
+            Six executive conversations for finance, commercial and supply chain
+            leaders.
           </p>
-          <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-            What We&apos;ll Explore
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-navy-subtle">
-            Six focused conversations — designed for planning, finance,
-            commercial and supply chain leaders.
-          </p>
-        </motion.div>
+        </div>
 
-        <div className="mt-14 space-y-4">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {discussionTopics.map((topic, i) => (
             <motion.article
               key={topic.number}
-              initial={{ opacity: 0, x: -16 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.05 }}
-              className="group grid gap-4 rounded-sm border border-border-subtle bg-white p-6 transition-all hover:border-electric/20 hover:shadow-md sm:grid-cols-12 sm:items-center sm:p-8"
+              transition={{ delay: i * 0.04 }}
+              className="group rounded-sm border border-border-subtle bg-white p-4 transition-colors hover:border-electric/25"
             >
-              <span className="font-display text-2xl font-bold text-gold/80 sm:col-span-1">
+              <span className="text-[10px] font-bold text-gold">
                 {topic.number}
               </span>
-              <div className="sm:col-span-11">
-                <h3 className="font-display text-lg font-semibold text-navy group-hover:text-electric transition-colors">
-                  {topic.title}
-                </h3>
-                <p className="mt-1.5 text-sm leading-relaxed text-navy-subtle">
-                  {topic.description}
-                </p>
-              </div>
+              <h3 className="mt-1.5 font-display text-sm font-semibold leading-snug text-navy group-hover:text-electric transition-colors">
+                {topic.title}
+              </h3>
+              <p className="mt-1 text-xs leading-relaxed text-navy-subtle">
+                {topic.description}
+              </p>
             </motion.article>
           ))}
         </div>

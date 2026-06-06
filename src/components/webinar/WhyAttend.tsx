@@ -6,42 +6,32 @@ import { Container } from "@/components/ui/Container";
 
 export function WhyAttend() {
   return (
-    <section className="border-y border-border-subtle bg-white py-20 lg:py-28">
+    <section className="border-t border-border-subtle bg-ivory-muted/30 py-12 lg:py-14">
       <Container>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mx-auto max-w-3xl text-center"
-        >
-          <h2 className="font-display text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-            Planning Is Changing — Faster Than Ever
+        <div className="mb-8 grid gap-4 lg:grid-cols-2 lg:items-end">
+          <h2 className="font-display text-2xl font-bold tracking-tight text-navy sm:text-3xl">
+            The Cycle Is Changing — Faster Than Ever
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-navy-subtle lg:text-lg">
-            Annual plans are becoming obsolete the moment they&apos;re approved.
-            Organizations are struggling to align strategy, finance, commercial,
-            supply chain, and operations in an increasingly uncertain world.
-            Discover how AI is transforming the planning playbook.
+          <p className="text-sm leading-relaxed text-navy-subtle">
+            Annual plans expire on approval. Leaders need AI-orchestrated cycles
+            that fuse strategy, finance, commercial, supply and operations.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {whyAttendCards.map((card, i) => (
             <motion.article
               key={card.title}
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.06 }}
-              className="group rounded-sm border border-border-subtle bg-ivory p-7 transition-all hover:border-electric/25 hover:shadow-lg hover:shadow-navy/5"
+              transition={{ delay: i * 0.04 }}
+              className="rounded-sm border border-border-subtle bg-white p-4"
             >
-              <span className="text-[11px] font-bold uppercase tracking-[0.15em] text-gold">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <h3 className="mt-3 font-display text-lg font-semibold text-navy group-hover:text-electric transition-colors">
+              <h3 className="font-display text-sm font-semibold text-navy">
                 {card.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-navy-subtle">
+              <p className="mt-1 text-xs leading-relaxed text-navy-subtle">
                 {card.description}
               </p>
             </motion.article>

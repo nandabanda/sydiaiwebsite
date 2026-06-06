@@ -6,38 +6,32 @@ import { Container } from "@/components/ui/Container";
 
 export function SpeakerSection() {
   return (
-    <section className="border-t border-border-subtle bg-ivory-muted/40 py-20 lg:py-28">
+    <section className="border-t border-border-subtle py-12 lg:py-14">
       <Container>
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mx-auto max-w-4xl"
+          className="flex flex-col gap-4 rounded-sm border border-border-subtle bg-white p-5 sm:flex-row sm:items-center sm:gap-6 sm:p-6"
         >
-          <p className="text-center text-xs font-bold uppercase tracking-[0.2em] text-electric">
-            Speaker
-          </p>
-          <h2 className="mt-3 text-center font-display text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-            Meet Your Speaker
-          </h2>
-
-          <div className="mt-12 grid gap-10 rounded-sm border border-border-subtle bg-white p-8 sm:grid-cols-[auto_1fr] sm:p-10 lg:gap-12">
-            <div className="mx-auto flex h-32 w-32 shrink-0 items-center justify-center rounded-sm bg-gradient-to-br from-navy to-navy-muted sm:mx-0">
-              <span className="font-display text-4xl font-bold text-gold-light">
-                NK
-              </span>
-            </div>
-            <div>
-              <h3 className="font-display text-2xl font-bold text-navy">
-                {webinarEvent.speaker.name}
-              </h3>
-              <p className="mt-1 text-sm font-semibold text-electric">
-                {webinarEvent.speaker.title}
-              </p>
-              <p className="mt-5 text-base leading-relaxed text-navy-subtle">
-                {webinarEvent.speaker.bio}
-              </p>
-            </div>
+          <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-sm bg-navy">
+            <span className="font-display text-xl font-bold text-gold-light">
+              NK
+            </span>
+          </div>
+          <div className="min-w-0 flex-1">
+            <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-electric">
+              Speaker
+            </p>
+            <h2 className="mt-0.5 font-display text-lg font-bold text-navy">
+              {webinarEvent.speaker.name}
+            </h2>
+            <p className="text-xs font-semibold text-navy-muted">
+              {webinarEvent.speaker.title}
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-navy-subtle">
+              {webinarEvent.speaker.bio}
+            </p>
           </div>
         </motion.div>
       </Container>
